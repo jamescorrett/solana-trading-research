@@ -55,3 +55,10 @@ Public attribution does not prove wallet ownership. A single trading sequence is
 ## AI-assisted development
 
 I used AI-assisted coding for parts of the implementation and debugging. I led the investigation: selecting research questions, making engineering and data-collection decisions, designing validation approaches, checking outputs and interpreting results. AI-generated suggestions were treated as code and hypotheses to review, not as independent evidence.
+
+## Matched-entry evaluation
+
+An exploratory matched-token evaluation is documented in [EVALUATION.md](EVALUATION.md),
+with the model, permutation tests, bootstrap validation, and a reviewed derived feature dataset.
+The figures describe internal retrospective evaluation, not trading performance or an
+independent future holdout.
