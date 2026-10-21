@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cented-re"
+version = "0.1.0"
+description = "Leakage-safe Solana/Pump.fun data collector for black-box wallet strategy research"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "orjson>=3.10,<4",
+  "pydantic>=2.8,<3",
+  "pydantic-settings>=2.4,<3",
+  "rich>=13.7,<15",
+  "websockets>=13,<16",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+  "ruff>=0.6,<1",
+]
+
+[project.scripts]
+cented-collect = "cented_re.cli:main"
+cented-inspect = "cented_re.inspect:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cented_re"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
